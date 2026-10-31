@@ -1,0 +1,12 @@
+{
+  "name": "browser-fps-game",
+  "version": "1.0.0",
+  "main": "servers.js",
+  "scripts": {
+    "start": "node servers.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}

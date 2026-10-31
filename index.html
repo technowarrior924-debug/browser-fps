@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Browser FPS Game</title>
+    <style>
+        body {
+            
+            margin: 0;
+            overflow: hidden;
+            font-family: sans-serif;
+            user-select: none;
+        }
+        /* Crosshair in the center of screen */
+        #crosshair {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            background-color: #00ff00;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 10;
+        }
+        /* Start Screen Overlay */
+        #blocker {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 20;
+        }
+        #hud {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #00ff00;
+            font-size: 20px;
+            font-family: monospace;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="crosshair"></div>
+    <div id="hud">AMMO: 30 / 30</div>
+    <div id="blocker">
+        <div>Click To Play (Kirka Style FPS)</div>
+    </div>
+
+    <!-- CDN link for Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
